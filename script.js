@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    // Smooth scrolling for navigation links that point to an ID on the current page
+    document.querySelectorAll('nav a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
+            const targetId = href.substring(href.indexOf('#'));
             
-            const targetId = this.getAttribute('href');
+            // Check if the target element exists on the CURRENT page
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                e.preventDefault();
                 // Adjust scroll position to account for sticky header
                 const navHeight = document.querySelector('nav').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;

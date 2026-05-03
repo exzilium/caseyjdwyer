@@ -153,8 +153,13 @@ nav a::after {
 
 
 
-nav a:hover {
+nav a:hover,
+nav a.nav-active {
     color: var(--accent-periwinkle);
+}
+
+nav a.nav-active::after {
+    width: 100%;
 }
 
 nav a:hover::after {
@@ -238,10 +243,68 @@ h2::after {
     color: var(--text-primary);
 }
 
-.card p {
+.card p,
+.media-description {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 20px;
+}
+
+/* Portfolio & Media Embeds */
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.spotify-embed,
+.youtube-embed {
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.youtube-embed {
+    aspect-ratio: 16/9;
+}
+
+/* Career Grid */
+.career-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.career-item {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.career-item:nth-child(even) {
+    grid-template-columns: 1.5fr 1fr;
+    text-align: right;
+}
+
+.career-item:nth-child(even) .career-image {
+    order: 2;
+}
+
+.career-image {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px var(--accent-glow);
 }
 
 /* Custom Audio Player Wrapper */
@@ -328,8 +391,9 @@ textarea:focus {
     box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-button[type="submit"] {
-    padding: 16px;
+button[type="submit"],
+.btn {
+    padding: 16px 32px;
     background: linear-gradient(135deg, var(--accent-violet) 0%, var(--accent-periwinkle) 100%);
     color: white;
     border: none;
@@ -339,14 +403,18 @@ button[type="submit"] {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px var(--accent-glow);
 }
 
-button[type="submit"]:active {
+button[type="submit"]:active,
+.btn:active {
     transform: translateY(0);
 }
 
