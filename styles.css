@@ -1,4 +1,4 @@
-/* Jango Fett Inspired Dark Mode Theme */
+/* Dark Mode Theme */
 :root {
     /* Color Palette */
     --bg-main: #111115;
@@ -72,6 +72,7 @@ header h1 {
     letter-spacing: -1px;
     background: linear-gradient(90deg, var(--text-primary), var(--accent-periwinkle));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     z-index: 1;
