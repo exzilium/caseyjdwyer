@@ -86,6 +86,37 @@ header p {
     z-index: 1;
 }
 
+/* Social Links */
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-pill {
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.social-pill:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 15px var(--accent-glow);
+    color: var(--accent-periwinkle);
+    transform: translateY(-2px);
+}
+
 /* Navigation */
 nav {
     display: flex;
