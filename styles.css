@@ -1,22 +1,28 @@
 /* Jango Fett Inspired Dark Mode Theme */
 :root {
     /* Color Palette */
-    --bg-main: #111115; /* Deep dark space grey */
-    --bg-surface: #1E1E24; /* Lighter dark grey for cards */
+    --bg-main: #111115;
+    /* Deep dark space grey */
+    --bg-surface: #1E1E24;
+    /* Lighter dark grey for cards */
     --bg-surface-hover: #26262E;
-    
-    --text-primary: #E0E0E5; /* Silver/Light Grey */
-    --text-secondary: #A1A1AA; /* Darker Silver */
-    
-    --accent-violet: #7B61FF; /* Jango Jumpsuit Violet */
-    --accent-periwinkle: #9090FF; /* Lighter highlight */
+
+    --text-primary: #E0E0E5;
+    /* Silver/Light Grey */
+    --text-secondary: #A1A1AA;
+    /* Darker Silver */
+
+    --accent-violet: #7B61FF;
+    /* Violet */
+    --accent-periwinkle: #9090FF;
+    /* Lighter highlight */
     --accent-glow: rgba(123, 97, 255, 0.3);
-    
+
     --border-color: #33333D;
 
     /* Typography */
     --font-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
     /* Layout */
     --max-width: 900px;
 }
@@ -40,7 +46,7 @@ body {
 header {
     text-align: center;
     padding: 6rem 1rem 4rem;
-    background: linear-gradient(180deg, rgba(30,30,36,1) 0%, rgba(17,17,21,1) 100%);
+    background: linear-gradient(180deg, rgba(30, 30, 36, 1) 0%, rgba(17, 17, 21, 1) 100%);
     border-bottom: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
@@ -162,7 +168,7 @@ h2::after {
     width: 100%;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -225,7 +231,8 @@ audio::-webkit-media-controls-panel {
 /* Video */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -267,7 +274,8 @@ label {
     font-weight: 500;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 15px;
     background: var(--bg-main);
@@ -279,7 +287,8 @@ input, textarea {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
     border-color: var(--accent-periwinkle);
     box-shadow: 0 0 0 3px var(--accent-glow);
@@ -322,7 +331,7 @@ footer {
     .about-container {
         grid-template-columns: 1fr;
     }
-    
+
     header h1 {
         font-size: 2.5rem;
     }
